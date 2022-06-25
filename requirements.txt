@@ -1,0 +1,12 @@
+string
+nltk
+pickle
+gTTS
+playsound
+numpy
+keras
+random2
+scikit-learn
+SpeechRecognition
+tensorflow
+flask
