@@ -5,5 +5,7 @@ The Problem Statement given was to build a virtual assistant from the Skype Logs
 
 **(extracting_intents notebook describes the process we used to clean and extract the required intents to train the chatbot.)**
 
+### If you want a fully hands on experience, just run all the cells in Model.ipynb file and see the magic. A virtual assistant completely controlled by voice, Giving an Extrodinary Hands Free Experience. Designed Exclusively for iNeuron.
+
 Team Name- **Celeste**
 Team Members - Rishi R, Bharath Raj
