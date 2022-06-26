@@ -116,47 +116,41 @@ def getResponse(ints, intents_json):
             break
     return result
 
-def chatbot_response(text):
-    ints = predict_class(text, model)
-    res = getResponse(ints, intents)
-    return res
-
-def voice_input():
-    r = sr.Recognizer()
-
-# using microphone as source for input
-    with sr.Microphone() as source:
-        print("Silence Please, Calibrating...")
-        r.adjust_for_ambient_noise(source, duration=1)
-        print("Calibrated, Please Say Something!")
-
-        # listens for the user's input
-        audio = r.listen(source)
-
-        # using google to recognize the speech
-        MyText = r.recognize_google(audio)
-        MyText = MyText.lower()
-        print(MyText)
-        return MyText
-
 def speak(temp):
     voice = gTTS(text=temp, lang="en")
     voice.save("temp.mp3")
     playsound.playsound("temp.mp3")
     os.remove("temp.mp3")
 
-def start_chat():
-    print("KIRA: Hello! How can I help you?\n\n")
-    while True:
-        inp = voice_input().lower()
-        if inp.lower() == "end":
-            break
-        if inp.lower() == '' or inp.lower() == '*':
-            print("Please re-type your query")
-            print("-"*50)
-        else:
-            resp = str(chatbot_response(inp))
-            print(f"KIRA: {resp}" + '\n')
-            speak(resp)
-            print("-" * 50)
-start_chat()
+def chatbot_response(text):
+    ints = predict_class(text, model)
+    res = getResponse(ints, intents)
+    speak(res)
+    return res
+
+#
+# def voice_input():
+#     r = sr.Recognizer()
+#     with sr.Microphone() as source:
+#         r.adjust_for_ambient_noise(source, duration=1)
+#         audio = r.listen(source)
+#         MyText = r.recognize_google(audio)
+#         MyText = MyText.lower()
+#         print(MyText)
+#         return MyText
+
+
+# def start_chat():
+#     print("KIRA: Hello! How can I help you?\n\n")
+#     while True:
+#         inp = voice_input().lower()
+#         if inp.lower() == "end":
+#             break
+#         if inp.lower() == '' or inp.lower() == '*':
+#             print("Please re-type your query")
+#             print("-"*50)
+#         else:
+#             resp = str(chatbot_response(inp))
+#             print(f"KIRA: {resp}" + '\n')
+#             speak(resp)
+#             print("-" * 50)
