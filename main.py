@@ -4,8 +4,8 @@ import string
 import nltk
 from nltk.stem import WordNetLemmatizer
 import pickle
-from gtts import gTTS
-import playsound
+# from gtts import gTTS
+# import playsound
 import os
 import json
 
@@ -116,11 +116,11 @@ def getResponse(ints, intents_json):
             break
     return result
 
-def speak(temp):
-    voice = gTTS(text=temp, lang="en")
-    voice.save("temp.mp3")
-    playsound.playsound("temp.mp3")
-    os.remove("temp.mp3")
+# def speak(temp):
+#     voice = gTTS(text=temp, lang="en")
+#     voice.save("temp.mp3")
+#     playsound.playsound("temp.mp3")
+#     os.remove("temp.mp3")
 
 def chatbot_response(text):
     ints = predict_class(text, model)
