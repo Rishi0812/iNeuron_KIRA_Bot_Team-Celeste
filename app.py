@@ -23,7 +23,7 @@ def home():
 def get_bot_response():
     userText = request.args.get('msg')
     temp = str(chatbot_response(userText))
-    return temp, speak
+    return temp
 
 @app.route('/post')
 def load_dialogue():
