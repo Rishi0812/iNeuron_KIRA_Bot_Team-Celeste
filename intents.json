@@ -1,0 +1,41 @@
+{
+    "intents":
+    [
+    {
+        "tag": "greeting",
+        "patterns": ["Hey there","Hi there","Hey","Hi","Yo","Hola","Good day","Sup?","Hey, nice to meet you"],
+        "responses": ["Hello","Hi","Good to see you","How may I help you?","What can I help you with?","Hello!"],
+        "context": [""]
+    },
+    {
+        "tag": "farewell",
+        "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting with you, bye", "Till next time"],
+        "responses": ["Have a nice day","For further , thank you"],
+        "context": [""]
+    },
+    {
+        "tag": "thanks",
+        "patterns": ["Great! Thank you","Thanks", "Thank you", "That's helpful", "Awesome, thanks","Thanks, appreciate it."],
+        "responses": ["It's my pleasure","Glad to be of service"],
+        "context": [""]
+    },
+    {
+        "tag": "identity",
+        "patterns": ["Who are you?","What's your name?","What are you?","What is this?"],
+        "responses": ["I am KIRA Bot","I'm here to help you out with various queries and gives you solutions"],
+        "context": [""]
+    },
+    {
+        "tag": "use",
+        "patterns": ["How you could help me?", "What help you provide?", "How you can be helpful?","What's your use?","What is this bot for?","What do you do?"],
+        "responses": ["I am KIRA Bot","I'm here to help you out with various queries and gives you solutions"],
+        "context": [""]
+    },
+    {
+        "tag": "noanswer",
+        "patterns": [],
+        "responses": ["Sorry, can't understand you","Please give me more info", "Not sure I understand","Sorry, I'm currently incapable of understanding what you're trying to say" ],
+        "context": [""]
+    }
+    ]
+}
